@@ -14,7 +14,7 @@
 
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
+    
 </head>
 <body>
     <form runat="server">
@@ -44,9 +44,11 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/">Home
+                        </a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/About">About</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact">Contact</a></li>
                         <li class="nav-item">
@@ -54,8 +56,12 @@
                                 <img src="image\icons8-shopping-cart-64.png" alt="Cart" style="width: 30px; height: 30px;">
                             </a>
                         </li>
-                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Login">Login</a></li>
-                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Register">Register</a></li>
+
+                        <li class="nav-item" runat="server" id="loginLink"><a class="nav-link" href="Login">Login</a></li>
+                       
+                        <li class="nav-item" runat="server" id="logoutLink" visible="false"><a class="nav-link" href="Logout">Logout</a></li>
+
+
                     </ul>
                 </div>
             </div>

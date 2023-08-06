@@ -16,7 +16,6 @@
                 }
 
                 .validation-error {
-                   
                     margin-left: -415px;
                 }
             </style>
@@ -31,24 +30,27 @@
                             <div class="card-body p-5 shadow-5 text-center">
                                 <h2 class="fw-bold mb-5">Login</h2>
                                 <asp:Label ID="lblErrorMessage" runat="server" CssClass="text-danger" Visible="false"></asp:Label>
-                                <!-- 2 column grid layout with text inputs for the first and last names -->
-
-
                                 <div class="form-outline">
                                     <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control" placeholder="Username" />
-                                    <asp:RequiredFieldValidator ID="rfvUsername" runat="server" ControlToValidate="txtUsername" ErrorMessage="Username is required." ForeColor="Red" CssClass="validation-error"/>
+                                    <asp:RequiredFieldValidator ID="rfvUsername" runat="server" ControlToValidate="txtUsername" ErrorMessage="Username is required." ForeColor="Red" CssClass="validation-error" />
                                 </div>
 
 
                                 <!-- Password input -->
                                 <div class="form-outline mb-4">
                                     <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" TextMode="Password" placeholder="Password" />
-                                    <asp:RequiredFieldValidator ID="rfvPassword" runat="server" ControlToValidate="txtPassword" ErrorMessage="Password is required." ForeColor="Red" CssClass="validation-error"/>
+                                    <asp:RequiredFieldValidator ID="rfvPassword" runat="server" ControlToValidate="txtPassword" ErrorMessage="Password is required." ForeColor="Red" CssClass="validation-error" />
 
                                 </div>
-                                <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="btn btn-primary btn-block mb-4" OnClick="btnLogin_Click" />
 
-                                <!-- Register buttons -->
+                               
+                                <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="btn btn-primary btn-block mb-4" OnClick="btnLogin_Click" />
+                                 <div>
+                                    <p class="mb-0">
+                                        Don't have an account? <a href="Register.aspx" class=" fw-bold">Register</a>
+                                    </p>
+                                </div>
+
 
 
                             </div>
