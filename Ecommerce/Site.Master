@@ -14,7 +14,29 @@
 
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <style>
+        .custom-card {
+    max-width: 300px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the card horizontally */
+}
+    </style>
+   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script>
+  $(document).ready(function () {
+    // Show the modal when btnAddCategory is clicked
+    $('#btnAddCategory').click(function () {
+      $('#addCategoryModal').modal('show');
+    });
 
+    // Handle the Save Category button click
+    $('#btnSaveCategory').click(function () {
+      // Here, you can write JavaScript to retrieve form values and perform any necessary AJAX request to save the new category.
+      // Once the category is saved, you can close the modal:
+      $('#addCategoryModal').modal('hide');
+    });
+  });
+    </script>
 </head>
 <body>
     <form runat="server">
@@ -44,18 +66,25 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/">Home
+                        </a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/About">About</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Order">Order</a></li>
                         <li class="nav-item">
                             <a class="nav-link" runat="server" href="~/Cart">
                                 <img src="image\icons8-shopping-cart-64.png" alt="Cart" style="width: 30px; height: 30px;">
                             </a>
                         </li>
-                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Login">Login</a></li>
-                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Register">Register</a></li>
+
+                        <li class="nav-item" runat="server" id="loginLink"><a class="nav-link" href="Login">Login</a></li>
+                       
+                        <li class="nav-item" runat="server" id="logoutLink" visible="false"><a class="nav-link" href="Logout">Logout</a></li>
+
+
                     </ul>
                 </div>
             </div>

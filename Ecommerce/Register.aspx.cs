@@ -35,7 +35,7 @@ namespace Ecommerce
                 {
                     username = username,
                     password = password,
-                    userType = "admin"
+                    userType = "customer"
                 };
 
                 db.Users.Add(u);
@@ -43,7 +43,10 @@ namespace Ecommerce
                 try
                 {
                     db.SaveChanges();
-                    lblRegistrationMessage.Visible = true;
+                    string script = "alert('Registration successful');";
+                    ClientScript.RegisterStartupScript(this.GetType(), "registrationSuccessAlert", script, true);
+                    Response.Redirect("~/Login.aspx");
+                    
                 }
                 catch (DbEntityValidationException ex)
                 {

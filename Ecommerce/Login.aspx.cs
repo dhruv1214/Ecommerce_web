@@ -22,6 +22,8 @@ namespace Ecommerce
             if (user != null)
             {
                 // Redirect to the home page or any other page after successful login
+                Session["username"] = user.username; // Assuming you have a UserID property in the Users table
+                
                 Response.Redirect("~/Default.aspx");
             }
             else
