@@ -149,10 +149,30 @@
     </Content>
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="image\i3.jpg" />
+    <Content Include="image\i5.jpg" />
+    <Content Include="image\i7-1.jpg" />
+    <Content Include="image\i7.jpg" />
+    <Content Include="image\i9-1.jpg" />
+    <Content Include="image\i9.jpg" />
     <Content Include="image\icons8-shopping-cart-64.png" />
+    <Content Include="image\kingston1.jpg" />
+    <Content Include="image\micron1.jpg" />
+    <Content Include="image\natec.jpg" />
+    <Content Include="image\nvd3050-1.jpg" />
+    <Content Include="image\nvd3060-1.jpg" />
+    <Content Include="image\nvd3070-1.jpg" />
+    <Content Include="image\nvd3080-1.jpg" />
+    <Content Include="image\sabrent164.jpg" />
+    <Content Include="image\sam-nvme.jpg" />
+    <Content Include="image\sam-nvme2.jpg" />
+    <Content Include="image\sam-nvme4.jpg" />
+    <Content Include="image\SAM870.jpg" />
+    <Content Include="image\samsung32.jpg" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="Order.aspx" />
+    <Content Include="Product.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -311,12 +331,24 @@
     <Compile Include="Logout.aspx.designer.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\CartItem.cs" />
+    <Compile Include="Models\CartItemList.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductDB.cs" />
     <Compile Include="Order.aspx.cs">
       <DependentUpon>Order.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Order.aspx.designer.cs">
       <DependentUpon>Order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product.aspx.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product.aspx.designer.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
     </Compile>
     <Compile Include="Product.cs">
       <DependentUpon>ElectronicShopDataModel.tt</DependentUpon>
